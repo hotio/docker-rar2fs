@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+umask "${UMASK}"
+
+exec s6-setuidgid hotio rar2fs --date-rar --seek-length=1 -o allow_other -o uid="${PUID}" -o gid="${PGID}" -o ro "${INPUT_DIR}" "${OUTPUT_DIR}"
