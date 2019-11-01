@@ -3,4 +3,4 @@
 
 umask "${UMASK}"
 
-exec s6-setuidgid hotio rar2fs -f --date-rar --seek-length=1 -o ro "${INPUT_DIR}" "${OUTPUT_DIR}"
+exec s6-setuidgid hotio rar2fs -f --date-rar --seek-length=1 -o allow_other -o allow_root -o ro "${INPUT_DIR}" "${OUTPUT_DIR}"
