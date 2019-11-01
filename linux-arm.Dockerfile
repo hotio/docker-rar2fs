@@ -7,7 +7,8 @@ ENV INPUT_DIR="/input" OUTPUT_DIR="/output"
 
 # https://github.com/hasse69/rar2fs/releases
 # https://www.rarlab.com/rar_add.htm
-ENV RAR2FS_VERSION=1.27.2 UNRARSRC_VERSION=5.8.3
+ARG RAR2FS_VERSION=1.27.2
+ARG UNRARSRC_VERSION=5.8.3
 
 # install packages
 RUN apt update && \
