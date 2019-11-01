@@ -28,7 +28,7 @@ By using the option `:shared` on your volume, you'll be able to access the rar2f
 
 ## Extra docker privileges
 
-In most cases you will need some or all of the following flags added to your command to get the required docker privileges when using a rclone or rar2fs mount.
+In most cases you will need some or all of the following flags added to your command to get the required docker privileges when using a rar2fs mount.
 
 ```shell
 --security-opt apparmor:unconfined --cap-add SYS_ADMIN --device /dev/fuse
