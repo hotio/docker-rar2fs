@@ -5,8 +5,6 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 ENV INPUT_DIR="/input" OUTPUT_DIR="/output"
 
-COPY root/ /
-
 # https://github.com/hasse69/rar2fs/releases
 # https://www.rarlab.com/rar_add.htm
 ENV RAR2FS_VERSION=1.27.2 UNRARSRC_VERSION=5.8.3
@@ -32,3 +30,5 @@ RUN apt update && \
     apt autoremove -y && \
     apt clean && \
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
+
+COPY root/ /
