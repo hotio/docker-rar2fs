@@ -3,7 +3,7 @@ FROM hotio/base:${BRANCH}
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-ENV INPUT_DIR="/input" OUTPUT_DIR="/output"
+ENV SOURCE="/source" MOUNTPOINT="/mountpoint"
 
 # https://github.com/hasse69/rar2fs/releases
 # https://www.rarlab.com/rar_add.htm
