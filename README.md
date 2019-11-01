@@ -22,6 +22,10 @@ The environment variables below are all optional, the values you see are the def
 -e OUTPUT_DIR=/output
 ```
 
+## Using the rar2fs mount on the host or in another container
+
+By using the option `:shared` on your volume, you'll be able to access the rar2fs mount by going to the folder `/tmp/output` on the host. If you add `--volumes-from rar2fs` to another container's run command, you can go to the rar2fs mount from within that container, by default `/output`.
+
 ## Extra docker privileges
 
 In most cases you will need some or all of the following flags added to your command to get the required docker privileges when using a rclone or rar2fs mount.
