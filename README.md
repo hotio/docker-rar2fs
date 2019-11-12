@@ -22,6 +22,15 @@ The environment variables below are all optional, the values you see are the def
 -e MOUNTPOINT=/mountpoint
 ```
 
+## Tags
+
+| Tag      | Description                    |
+| ---------|--------------------------------|
+| latest   | The same as `stable`           |
+| stable   | Stable version                 |
+
+You can also find tags that reference a commit or version number.
+
 ## Using the rar2fs mount on the host or in another container
 
 By using the option `:shared` on your volume, you'll be able to access the rar2fs mount by going to the folder `/tmp/mountpoint` on the host. If you add `--volumes-from rar2fs` to another container's run command, you can go to the rar2fs mount from within that container.
