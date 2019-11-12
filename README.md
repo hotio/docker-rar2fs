@@ -1,8 +1,7 @@
 # rar2fs
 
-[![GitHub](https://img.shields.io/badge/source-github-lightgrey?style=flat-square)](https://github.com/hotio/docker-rar2fs)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hotio/rar2fs?style=flat-square)](https://hub.docker.com/r/hotio/rar2fs)
-[![Drone (cloud)](https://img.shields.io/drone/build/hotio/docker-rar2fs?style=flat-square)](https://cloud.drone.io/hotio/docker-rar2fs)
+[![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-rar2fs)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hotio/rar2fs)](https://hub.docker.com/r/hotio/rar2fs)
 
 ## Starting the container
 
@@ -24,10 +23,10 @@ The environment variables below are all optional, the values you see are the def
 
 ## Tags
 
-| Tag      | Description                    |
-| ---------|--------------------------------|
-| latest   | The same as `stable`           |
-| stable   | Stable version                 |
+| Tag      | Description                    | Build Status                                                                                                                                          |
+| ---------|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| latest   | The same as `stable`           |                                                                                                                                                       |
+| stable   | Stable version                 | [![Build Status](https://cloud.drone.io/api/badges/hotio/docker-rar2fs/status.svg?ref=refs/heads/stable)](https://cloud.drone.io/hotio/docker-rar2fs) |
 
 You can also find tags that reference a commit or version number.
 
