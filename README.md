@@ -9,7 +9,7 @@
 Just the basics to get the container running:
 
 ```shell
-docker run --rm --name rar2fs -v /tmp/source:/source -v /tmp/mountpoint:/mountpoint:shared hotio/rar2fs
+docker run --rm --name rar2fs -v /<host_folder>:/config -v /<host_folder>:/source -v /<host_folder>:/mountpoint:shared hotio/rar2fs
 ```
 
 The environment variables below are all optional, the values you see are the defaults.
@@ -34,7 +34,7 @@ You can also find tags that reference a commit or version number.
 
 ## Using the rar2fs mount on the host or in another container
 
-By using the option `:shared` on your volume, you'll be able to access the rar2fs mount by going to the folder `/tmp/mountpoint` on the host. If you add `--volumes-from rar2fs` to another container's run command, you can go to the rar2fs mount from within that container.
+By using the option `:shared` on your volume `/mountpoint`, you'll be able to access the rar2fs mount by going to the folder on the host. If you add `--volumes-from rar2fs` to another container's run command, you can go to the rar2fs mount from within that container.
 
 ## Extra docker privileges
 
