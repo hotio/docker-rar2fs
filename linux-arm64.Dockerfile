@@ -6,7 +6,7 @@ ENV SOURCE="/source" MOUNTPOINT="/mountpoint"
 
 # https://github.com/hasse69/rar2fs/releases
 # https://www.rarlab.com/rar_add.htm
-ARG RAR2FS_VERSION=1.28.0
+ARG RAR2FS_VERSION=1.29.0
 ARG UNRARSRC_VERSION=5.8.3
 
 # install packages
