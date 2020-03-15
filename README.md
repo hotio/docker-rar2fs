@@ -36,9 +36,9 @@ The environment variables below are all optional, the values you see are the def
 
 You can also find tags that reference a commit or version number.
 
-## Using the rar2fs mount on the host or in another container
+## Using the rar2fs mount on the host
 
-By using the option `:shared` on your volume `/mountpoint`, you'll be able to access the rar2fs mount by going to the folder on the host. If you add `--volumes-from rar2fs` to another container's run command, you can go to the rar2fs mount from within that container.
+By setting the `bind-propagation` to `shared` on the volume `mountpoint`, like this `-v /data/mountpoint:/mountpoint:shared`, you are able to access the mount from the host. If you want to use this mount in another container, the best solution is to create a volume on the parent folder of that mount with `bind-propagation` set to `slave`. For example, `-v /data:/data:slave` (`/data` on the host, would contain the previously created volume `mountpoint`). Doing it like this will ensure that when the container creating the mount restarts, the other containers using that mount will recover and keep working.
 
 ## Extra docker privileges
 
