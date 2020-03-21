@@ -12,7 +12,11 @@
 Just the basics to get the container running:
 
 ```shell
-docker run --rm --name rar2fs -v /<host_folder_config>:/config -v /<host_folder_source>:/source -v /<host_folder_mountpoint>:/mountpoint:shared hotio/rar2fs
+docker run --rm --name rar2fs \
+    -v /<host_folder_config>:/config \
+    -v /<host_folder_source>:/source \
+    -v /<host_folder_mountpoint>:/mountpoint:shared \
+    hotio/rar2fs
 ```
 
 The environment variables below are all optional, the values you see are the defaults.
