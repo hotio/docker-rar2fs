@@ -3,7 +3,7 @@ LABEL maintainer="hotio"
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-ENTRYPOINT ["rar2fs", "-f", "-o auto_unmount"]
+ENTRYPOINT ["rar2fs", "-f", "-o", "auto_unmount"]
 
 # https://www.rarlab.com/rar_add.htm
 ARG RAR2FS_VERSION
