@@ -1,5 +1,0 @@
-#!/usr/bin/with-contenv bash
-# shellcheck shell=bash
-
-# shellcheck disable=SC2086
-exec rar2fs "${SOURCE}" "${MOUNTPOINT}" -f --date-rar --seek-length=1 -o auto_unmount -o allow_other -o uid="${PUID}" -o gid="${PGID}" -o umask="${UMASK}" ${ARGS}
