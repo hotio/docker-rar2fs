@@ -1,4 +1,4 @@
-FROM alpine@sha256:ad295e950e71627e9d0d14cdc533f4031d42edae31ab57a841c5b9588eacc280
+FROM alpine:3.11 as builder
 
 # install
 RUN apk add --no-cache autoconf automake curl fuse-dev g++ make tar
