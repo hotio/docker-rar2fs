@@ -9,6 +9,7 @@ ARG UNRARSRC_VERSION=5.9.2
 
 # install packages
 RUN tempdir="/rar2fs" && \
+    mkdir "${tempdir}" && \
     curl -fsSL "https://github.com/hasse69/rar2fs/archive/v${RAR2FS_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" --strip-components=1 && \
     curl -fsSL "https://www.rarlab.com/rar/unrarsrc-${UNRARSRC_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" && \
     cd "${tempdir}/unrar" && \
