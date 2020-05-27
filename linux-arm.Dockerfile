@@ -1,32 +1,29 @@
-FROM ubuntu@sha256:214d66c966334f0223b036c1e56d9794bc18b71dd20d90abb28d838a5e7fe7f1
-LABEL maintainer="hotio"
+FROM alpine:3.11 as builder
 
-ARG DEBIAN_FRONTEND="noninteractive"
-
-ENTRYPOINT ["rar2fs", "-f", "-o", "auto_unmount"]
+# install
+RUN apk add --no-cache autoconf automake curl fuse-dev g++ make tar
 
 # https://www.rarlab.com/rar_add.htm
 ARG RAR2FS_VERSION
-ARG UNRARSRC_VERSION=5.8.3
+ARG UNRARSRC_VERSION=5.9.2
 
 # install packages
-RUN apt update && \
-    apt install -y --no-install-recommends --no-install-suggests \
-        fuse \
-        ca-certificates curl libfuse-dev autoconf automake build-essential && \
-# install rar2fs
-    tempdir="$(mktemp -d)" && \
+RUN tempdir="/rar2fs" && \
     curl -fsSL "https://github.com/hasse69/rar2fs/archive/v${RAR2FS_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" --strip-components=1 && \
     curl -fsSL "https://www.rarlab.com/rar/unrarsrc-${UNRARSRC_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" && \
     cd "${tempdir}/unrar" && \
-    make lib && make install-lib && \
+    make lib && \
     cd "${tempdir}" && \
     autoreconf -f -i && \
-    ./configure && make && make install && \
-    cd ~ && \
-    rm -rf "${tempdir}" && \
-# clean up
-    apt purge -y ca-certificates curl libfuse-dev autoconf automake build-essential && \
-    apt autoremove -y && \
-    apt clean && \
-    rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
+    ./configure && make
+
+
+FROM alpine@sha256:19c4e520fa84832d6deab48cd911067e6d8b0a9fa73fc054c7b9031f1d89e4cf
+LABEL maintainer="hotio"
+
+ENTRYPOINT ["rar2fs", "-f", "-o", "auto_unmount"]
+
+# install packages
+RUN apk add --no-cache fuse libstdc++
+
+COPY --from=builder /rar2fs/src/rar2fs /usr/local/bin/rar2fs
