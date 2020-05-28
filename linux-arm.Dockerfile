@@ -1,7 +1,7 @@
 FROM alpine:3.11 as builder
 
 # install
-RUN apk add --no-cache autoconf automake curl fuse-dev g++ make
+RUN apk add --no-cache autoconf automake fuse-dev g++ make
 
 # https://www.rarlab.com/rar_add.htm
 ARG RAR2FS_VERSION
@@ -10,8 +10,8 @@ ARG UNRARSRC_VERSION=5.9.2
 # install packages
 RUN tempdir="/rar2fs" && \
     mkdir "${tempdir}" && \
-    curl -fsSL "https://github.com/hasse69/rar2fs/archive/v${RAR2FS_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" --strip-components=1 && \
-    curl -fsSL "https://www.rarlab.com/rar/unrarsrc-${UNRARSRC_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" && \
+    wget -O - "https://github.com/hasse69/rar2fs/archive/v${RAR2FS_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" --strip-components=1 && \
+    wget -O - "https://www.rarlab.com/rar/unrarsrc-${UNRARSRC_VERSION}.tar.gz" | tar xzf - -C "${tempdir}" && \
     cd "${tempdir}/unrar" && \
     make lib && \
     cd "${tempdir}" && \
