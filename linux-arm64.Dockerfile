@@ -1,7 +1,7 @@
 FROM alpine:3.11 as builder
 
 # install
-RUN apk add --no-cache autoconf automake curl fuse-dev g++ make tar
+RUN apk add --no-cache autoconf automake curl fuse-dev g++ make
 
 # https://www.rarlab.com/rar_add.htm
 ARG RAR2FS_VERSION
