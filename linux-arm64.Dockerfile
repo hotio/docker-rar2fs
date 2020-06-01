@@ -1,4 +1,4 @@
-FROM alpine:3.11 as builder
+FROM alpine:3.12 as builder
 
 # install
 RUN apk add --no-cache autoconf automake fuse-dev g++ make
