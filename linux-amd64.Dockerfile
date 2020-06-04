@@ -21,10 +21,7 @@ RUN tempdir="/rar2fs" && \
 
 FROM alpine@sha256:a15790640a6690aa1730c38cf0a440e2aa44aaca9b0e8931a9f2b0d7cc90fd65
 LABEL maintainer="hotio"
-
+ENV FUSE_THREAD_STACK=2048000
 ENTRYPOINT ["rar2fs", "-f", "-o", "auto_unmount"]
-
-# install packages
 RUN apk add --no-cache fuse libstdc++
-
 COPY --from=builder /rar2fs/src/rar2fs /usr/local/bin/rar2fs
