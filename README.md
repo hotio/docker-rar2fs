@@ -20,10 +20,10 @@ The default `ENTRYPOINT` is `rar2fs -f -o auto_unmount`.
 
 ## Tags
 
-| Tag      | Description                    | Build Status                                                                                                                                          | Last Updated                                                                                                                                                  |
-| ---------|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| latest   | The same as `stable`           |                                                                                                                                                       |                                                                                                                                                               |
-| stable   | Stable version                 | [![Build Status](https://cloud.drone.io/api/badges/hotio/docker-rar2fs/status.svg?ref=refs/heads/stable)](https://cloud.drone.io/hotio/docker-rar2fs) | [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/hotio/docker-rar2fs/stable)](https://github.com/hotio/docker-rar2fs/commits/stable) |
+| Tag      | Description                    |
+| ---------|--------------------------------|
+| latest   | The same as `stable`           |
+| stable   | Stable version                 |
 
 You can also find tags that reference a commit or version number.
 
