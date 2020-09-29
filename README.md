@@ -21,10 +21,9 @@ The default `ENTRYPOINT` is `rar2fs -f -o auto_unmount`.
 
 ## Tags
 
-| Tag      | Description                    |
-| ---------|--------------------------------|
-| latest   | The same as `stable`           |
-| stable   | Stable version                 |
+| Tag              | Upstream        |
+| -----------------|-----------------|
+| release (latest) | GitHub releases |
 
 You can also find tags that reference a commit or version number.
 
