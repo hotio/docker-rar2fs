@@ -1,6 +1,6 @@
 # rar2fs
 
-![logo](https://hotio.dev/img/rar2fs.png)
+[<img src="https://hotio.dev/img/rar2fs.png" alt="logo" height="130" width="130">](https://github.com/hasse69/rar2fs)
 
 ![Base](https://img.shields.io/badge/base-alpine-blue)
 [![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-rar2fs)
