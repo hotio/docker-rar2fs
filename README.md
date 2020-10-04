@@ -19,9 +19,9 @@ The default `ENTRYPOINT` is `rar2fs -f -o auto_unmount`.
 
 ## Tags
 
-| Tag                | Upstream        |
-| -------------------|-----------------|
-| `release` (latest) | GitHub releases |
+| Tag                | Upstream        | Version |
+| -------------------|-----------------|---------|
+| `release` (latest) | GitHub releases | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdocker-hotio%2Fdocker-rar2fs%2Frelease%2FVERSION.json) |
 
 You can also find tags that reference a commit or version number.
 
