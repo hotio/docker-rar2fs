@@ -1,6 +1,6 @@
 [<img src="https://hotio.dev/img/rar2fs.png" alt="logo" height="130" width="130">](https://github.com/hasse69/rar2fs)
 
-[![GitHub Source](https://img.shields.io/badge/github-source-ffb64c?style=flat-square&logo=github&logoColor=white&labelColor=757575)](https://github.com/docker-hotio/docker-rar2fs)
+[![GitHub Source](https://img.shields.io/badge/github-source-ffb64c?style=flat-square&logo=github&logoColor=white&labelColor=757575)](https://github.com/hotio/rar2fs)
 [![GitHub Registry](https://img.shields.io/badge/github-registry-ffb64c?style=flat-square&logo=github&logoColor=white&labelColor=757575)](https://github.com/users/hotio/packages/container/package/rar2fs)
 [![Docker Pulls](https://img.shields.io/docker/pulls/hotio/rar2fs?color=ffb64c&style=flat-square&label=pulls&logo=docker&logoColor=white&labelColor=757575)](https://hub.docker.com/r/hotio/rar2fs)
 [![Discord](https://img.shields.io/discord/610068305893523457?style=flat-square&color=ffb64c&label=discord&logo=discord&logoColor=white&labelColor=757575)](https://hotio.dev/discord)
@@ -21,7 +21,7 @@ The default `ENTRYPOINT` is `rar2fs -f -o auto_unmount`.
 
 | Tag                | Upstream        | Version | Build |
 | -------------------|-----------------|---------|-------|
-| `release` (latest) | GitHub releases | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdocker-hotio%2Fdocker-rar2fs%2Frelease%2FVERSION.json) | ![build](https://img.shields.io/github/workflow/status/docker-hotio/docker-rar2fs/build/release?style=flat-square&label=) |
+| `release` (latest) | GitHub releases | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Frar2fs%2Frelease%2FVERSION.json) | ![build](https://img.shields.io/github/workflow/status/hotio/rar2fs/build/release?style=flat-square&label=) |
 
 You can also find tags that reference a commit or version number.
 
