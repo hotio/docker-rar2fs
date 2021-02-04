@@ -19,11 +19,7 @@ The default `ENTRYPOINT` is `rar2fs -f -o auto_unmount`.
 
 ## Tags
 
-| Tag                | Upstream        | Version | Build |
-| -------------------|-----------------|---------|-------|
-| `release` (latest) | GitHub releases | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Frar2fs%2Frelease%2FVERSION.json) | ![build](https://img.shields.io/github/workflow/status/hotio/rar2fs/build/release?style=flat-square&label=) |
-
-You can also find tags that reference a commit or version number.
+Go [here](https://hotio.dev/containers-overview/#hotiorar2fs) to see all available tags.
 
 ## Using the rar2fs mount on the host
 
