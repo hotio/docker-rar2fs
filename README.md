@@ -19,7 +19,7 @@ The default `ENTRYPOINT` is `rar2fs -f -o auto_unmount`.
 
 ## Tags
 
-Go [here](https://hotio.dev/containers-overview/#hotiorar2fs) to see all available tags.
+Go [here](https://hotio.dev/tags-overview/#hotiorar2fs) to see all available tags.
 
 ## Using the rar2fs mount on the host
 
