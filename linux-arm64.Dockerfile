@@ -19,7 +19,7 @@ RUN tempdir="/rar2fs" && \
     ./configure && make
 
 
-FROM alpine@sha256:8f18fae117ec6e5777cc62ba78cbb3be10a8a38639ccfb949521abd95c8301a4
+FROM alpine@sha256:55fc95a51d97f7b76b124f3b581a58ebf5555d12574f16087de3971a12724dd4
 LABEL maintainer="hotio"
 ENV FUSE_THREAD_STACK=2048000
 ENTRYPOINT ["rar2fs", "-f", "-o", "auto_unmount"]
